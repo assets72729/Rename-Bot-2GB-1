@@ -4,24 +4,24 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID = os.environ.get("API_ID", "")
-    API_HASH = os.environ.get("API_HASH", "")
+    API_ID = os.environ.get("API_ID", "24890303")
+    API_HASH = os.environ.get("API_HASH", "94cf78d1e6883ecb10f32e31fc23cfe0")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
    
     # database config
-    DATABASE_NAME = os.environ.get("DATABASE_NAME","")     
+    DATABASE_NAME = os.environ.get("DATABASE_NAME","Cluster0")     
     DATABASE_URL = os.environ.get("DATABASE_URL","")
 
     # other configs
     BOT_UPTIME = time.time()
     START_PIC = (os.environ.get("START_PIC", "https://envs.sh/N2f.jpg https://envs.sh/N2a.jpg https://envs.sh/N2O.jpg")).split()
-    ADMIN = int(os.environ.get("ADMIN", ""))
+    ADMIN = int(os.environ.get("ADMIN", "7313000783"))
 
     # channels
     IS_FSUB = os.environ.get("IS_FSUB", "False").lower() == "true"  # Set "True" For Enable Force Subscribe
-    AUTH_CHANNELS = list(map(int, os.environ.get("AUTH_CHANNELS", "").split())) # Add Multiple Channels iD By Space
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
-    BIN_CHANNEL = int(os.environ.get("BIN_CHANNEL", ""))
+    AUTH_CHANNELS = list(map(int, os.environ.get("AUTH_CHANNELS", "-1002705791364").split())) # Add Multiple Channels iD By Space
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002560946157"))
+    BIN_CHANNEL = int(os.environ.get("BIN_CHANNEL", "-1002560946157"))
 
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", True))
